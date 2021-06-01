@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tutorial
 
-## Getting Started
+Так как на проекте не будет тайпскрипта, то советую пользоваться [PropTypes](https://ru.reactjs.org/docs/typechecking-with-proptypes.html)
 
-First, run the development server:
+!Важно, используется [`Next.js`](https://nextjs.org/docs/getting-started) это React с сервер сайд рендерингом. Тут главное понять как работает в нем роутинг. По сути каждый раз когда вы будете создвать новый файл в папке `pages`, то под него будет создаваться страничка. Подробнее [тут](https://nextjs.org/docs/routing/introduction)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Линтеры
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+В проекте используется:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [prettier](https://prettier.io/)
+- [eslint](https://eslint.org/docs/user-guide/getting-started)
+- [style lint](https://stylelint.io/)
+- [git simple hooks](https://www.npmjs.com/package/simple-git-hooks)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Удобные либы которые добавлены в пекедж джейсон
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [React hook form](https://react-hook-form.com/) - очень удобно работать с формами
+- [classnames](https://www.npmjs.com/package/classnames) - удобно миксовать классы
+- [react-use](https://github.com/streamich/react-use) - кучу готовых хуков чтобы не придумывать велосипед
+- [React Query](https://react-query.tanstack.com/installation) - удобная работа с запросами. Кеширует ваши запросы, дабы повторно их не исполнять.
 
-## Learn More
+## ~~Redux~~
 
-To learn more about Next.js, take a look at the following resources:
+Добавлять в проект просто так его не вижу смысла, будет нужен только тогда, когда проект сильно разрастется
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## VS Code extensions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Также для тех кто пользуется VSCode я добавил список из нужных плагинов, которые нужно доставить, будет всплывашка которая предложит их установить, когда открыли проект в первый раз. Те кто пользуется webstorm в этом сетапе не нуждаются
 
-## Deploy on Vercel
+## Структура создания компонента
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Например мы создали компонент Button
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Button:
+
+- index.js - файл который импортит в себя основной компонент и отдает его наружу
+- Button.jsx - само отображение файла
+- Button.module.css - здесь храним стили если хотим пользоваться `css-modules`
+- hooks.js - в том случае, если нужны кастомные хуки только для этого компонента
+- icons or images - папка с иконками или картинками вцелом, так как стоит плагин `@svgr/webpack` то `svg` иконки можно импортить как компоненты
