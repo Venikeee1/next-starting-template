@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { ReactComponent as IntroIcon } from '../../public/smarto.svg';
 import { Button } from '../components/UI/Button';
+import { smartOrangeService } from '../services/test.service';
 
 export default function Home() {
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    smartOrangeService.getUsers().then((data) => console.log(data));
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>

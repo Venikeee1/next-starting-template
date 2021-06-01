@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "next": "10.2.3",
     "next-compose-plugins": "^2.2.1",
