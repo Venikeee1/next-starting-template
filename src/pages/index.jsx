@@ -22,6 +22,24 @@ export default function Home() {
         <IntroIcon width={400} height={200} />
         <h1 className={styles.title}>Starting template</h1>
         <Button>Click me</Button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nostrum vitae eaque dolores nam enim
+          vel! Incidunt ea et veritatis eveniet maiores laborum reprehenderit fugiat voluptatum omnis quo.
+          Repudiandae quod consectetur dolor quae autem cupiditate sint molestias eius totam! Optio eum
+          maiores similique accusantium quisquam nemo veritatis dolor. Vitae fugit, maiores perferendis velit
+          officiis consequatur dolores eaque illo, ad sit molestias suscipit, id exercitationem non aut dolore
+          numquam! Dignissimos iste incidunt, rem sed explicabo quae natus error dicta quas architecto
+          cupiditate aperiam reiciendis minima aliquid perspiciatis dolor laborum inventore tempora
+          voluptatibus distinctio! Reprehenderit vel quia at quam voluptates? Error, iure corporis soluta
+          porro illo fuga, perspiciatis quia assumenda nisi unde optio praesentium incidunt fugiat saepe. Sint
+          iusto aliquam numquam in nam quasi omnis deleniti, ipsa officiis maiores quidem magni odio
+          dignissimos earum perferendis modi quis adipisci autem deserunt error. Temporibus, aliquam minus
+          natus voluptates labore quo at velit recusandae veritatis a. Hic laboriosam quis libero modi totam!
+          Beatae, delectus vel ducimus quos, nesciunt facilis magni facere suscipit eius esse quibusdam
+          inventore sit aperiam temporibus explicabo totam a ratione, enim ut neque rerum distinctio! Non
+          distinctio voluptatibus sapiente, enim ullam est quo, magnam iure doloremque, sit consequatur vitae.
+          Illo, odio distinctio.
+        </p>
       </main>
     </div>
   );
