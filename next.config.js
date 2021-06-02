@@ -1,11 +1,11 @@
 /* eslint-disable global-require */
-const {
-  PHASE_PRODUCTION_BUILD,
-  PHASE_DEVELOPMENT_SERVER,
-} = require('next/constants');
+const { PHASE_PRODUCTION_BUILD, PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 const { withPlugins, optional } = require('next-compose-plugins');
 
 const nextConfig = {
+  sassOptions: {
+    prependData: `@import "src/styles/mixins/index.scss"; @import "src/styles/variables/index.scss";`,
+  },
   webpack: (config) => {
     config.module.rules.unshift({
       test: /\.svg$/,
@@ -43,11 +43,11 @@ module.exports = withPlugins(
           optional(() =>
             require('@next/bundle-analyzer')({
               enabled: true,
-            })
+            }),
           ),
           [PHASE_PRODUCTION_BUILD],
         ]
       : null,
   ].filter(Boolean),
-  nextConfig
+  nextConfig,
 );

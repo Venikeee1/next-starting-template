@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "plugins": ["stylelint-order"],
   "rules": {
-    "declaration-block-no-duplicate-properties": true
+    "declaration-block-no-duplicate-properties": true,
+    "at-rule-no-unknown": null
   }
 }
